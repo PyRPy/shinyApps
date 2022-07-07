@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cars</title>
+    </head>
+
+    <body>
+        <script src = "https://code.jquery.com/jquery-2.1.0.js"></script>
+        <script>
+            var Car = function (x, y) {
+                this.x = x;
+                this.y = y;
+            };
+
+            var drawCar = function (car) {
+                var carHTML = '<img src="http://nostarch.com/images/car.png">';
+
+                var carElement = $(carHTML);
+
+                carElement.css({
+                    position: "absolute",
+                    left: car.x,
+                    top: car.y
+                });
+
+                $("body").append(carElement); // where it went wrong!
+            };
+
+            var volt = new Car(20, 20);
+            var vw = new Car(400, 400);
+
+            drawCar(volt);
+            drawCar(vw);
+        </script>
+    </body>
+</html>
+</html>
