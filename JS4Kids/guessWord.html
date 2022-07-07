@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess a word!</title>
+    </head>
+
+    <body>
+        <h1>Can you guess the word?</h1>
+        <p>My first web page.</p>
+        <script>
+            var words = ["java", "monkey", "great", "coffee"];
+            var word = words[Math.floor(Math.random() * words.length)];
+            // console.log(word);
+            var answerArray = [];
+            for (var i = 0; i < word.length; i++) {
+                answerArray[i] = "_";
+            }
+            // console.log(answerArray);
+            var remainingLetters = word.length;
+
+            while (remainingLetters > 0) {
+                alert(answerArray.join(" "));
+                var guess = prompt("guess a letter, or click cancel to stop playing.");
+                if (guess === null) {
+                    break;
+                } else if (guess.length !== 1) {
+                    alert("please enter a single letter.");
+                } else {
+                    for (var j = 0; j < word.length; j++) {
+                        if (word[j] === guess) {
+                            answerArray[j] = guess;
+                            remainingLetters--;
+                        }
+                    }
+                }
+            }
+            alert(answerArray.join(" "));
+            alert("You got talent! The answer is: " + word);
+        </script>
+    </body>
+</html>
+</html>

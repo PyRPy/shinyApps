@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interactive Programming</title>
+    </head>
+
+    <body>
+        <h1 id = "main-heading">Moving with me!</h1>
+
+        <script src = "https://code.jquery.com/jquery-2.1.0.js"></script>
+        <script>
+            // var doHomeworkAlarm = function() {
+            //     alert("hello, it's time for you to do your homework!");
+            // };
+
+            // var timeoutId = setTimeout(doHomeworkAlarm, 6000);
+        
+            var leftOffset = 0;
+            var moveHeading = function () {
+                $("#main-heading").offset({ left: leftOffset });
+                leftOffset++;
+
+                if (leftOffset > 200) {
+                    leftOffset = 0;
+                }
+            };
+
+            setInterval(moveHeading, 30);
+        </script>
+    </body>
+</html>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first proper HTML page</title>
+    </head>
+
+    <body>
+        <h1>Hello World!</h1>
+        <p>My first web page.</p>
+        <script>
+            var message = "Hello world!";
+            console.log(message);
+
+            var name = "John";
+            console.log("hello " + name);
+            if (name.length > 7) {
+                console.log("Wow, you have a long name!");
+            } else {
+                console.log("your name is not very long.");
+            }
+
+            var sheepCounted = 0;
+            while (sheepCounted < 10) {
+                console.log("i have counted " + sheepCounted + " sheep!");
+                sheepCounted++;
+            }
+            console.log("ZzzzzzzzzZ");
+
+            for (var sheepCounted = 0; sheepCounted < 10; sheepCounted++) {
+                console.log("I have counted " + sheepCounted + " sheep!");
+            }
+            console.log("------------------------");
+
+            var animals = ["Lion", "Flamingo", "Polar Bear", "Boa Constrictor"];
+            for (var i = 0; i < animals.length; i++) {
+                console.log("this zoo contains a " + animals[i] + ".");
+            }
+
+            for (var x = 2; x < 10000; x = x * 2) {
+                console.log(x);
+            }
+        </script>
+    </body>
+</html>
+</html>
