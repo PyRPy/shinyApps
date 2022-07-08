@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas</title>
+    </head>
+
+    <body>
+        <canvas id="canvas" width="200" height="200"></canvas>
+        
+        <script>
+            // select element
+            var canvas = document.getElementById("canvas");
+
+            // get drawing context
+            var ctx = canvas.getContext("2d");
+
+            // draw a scqure or rectangle
+            // ctx.fillRect(0, 0, 10, 10);
+
+            // draw many squares
+            ctx.fillStyle = "Red";
+            for (var i = 0; i < 8; i++) {
+                ctx.fillRect(i * 20, i * 20, 20, 20);
+            }
+
+            // draw a rectangle frame
+            ctx.strokeStyle = "Red";
+            ctx.lineWidth = 5;
+            ctx.strokeRect(120, 50, 50, 50);
+            
+
+        </script>
+    </body>
+</html>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas</title>
+    </head>
+
+    <body>
+        <canvas id="canvas" width="200" height="200"></canvas>
+        
+        <script>
+            // select element
+            var canvas = document.getElementById("canvas");
+
+            // get drawing context
+            var ctx = canvas.getContext("2d");
+
+            ctx.lineWidth = 5;
+            ctx.fillStyle = "Blue";
+            ctx.beginPath();
+            ctx.moveTo(50, 10);
+            ctx.lineTo(25, 50);
+            ctx.lineTo(75, 50);
+            ctx.lineTo(50, 10);
+            ctx.fill();     
+            
+            // draw a circle and half circle
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "Green";
+            ctx.beginPath();
+            ctx.arc(50, 100, 20, 0, Math.PI * 2, false);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(50, 150, 20, 0, Math.PI, false);
+            ctx.stroke();
+
+            // define a function to draw circle
+            var circle = function (x, y, radius) {
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+                ctx.stroke();
+            }
+
+            ctx.strokeStyle = "Blue";
+            for (var i = 0; i < 5; i++) {
+                x = 100;
+                y = 50;
+                radius = i * 5 + 1;
+                circle(x, y, radius);
+            }
+        </script>
+    </body>
+</html>
+</html>
