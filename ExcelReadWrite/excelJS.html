@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1 {color: red;}
+        </style>
+
+        <script>
+            var excel = new ActiveXObject("Excel.Application");
+            excel.visible == true;
+            var book = excel.Workbooks.Add;
+            book.Worksheets.Add;
+            book.Worksheets(1).Activate;
+            book.Worksheets(1).Cell(1,1).value="My first test with js and html."
+
+        </script>
+    </head>
+    <body>
+        <h1>Write Data Into Excel.</h1>
+        <h2>not working</h2>
+        <p>: https://www.techwalla.com/articles/how-to-use-javascript-with-excel</p>
+       
+    </body>
+</html>
